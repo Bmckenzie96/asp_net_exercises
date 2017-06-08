@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebApplication1.Models.Movie>
+
+@foreach (var movie in Model)
+{
+    <h3>@movie.Genre.Name</h3>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Html.ActionLink("add movie", "MovieForm", "Home")

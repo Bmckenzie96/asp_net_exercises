@@ -1,0 +1,10 @@
+﻿@model WebApplication1.ViewModels.MovieFormVM
+
+@using (Html.BeginForm("Save", "Home"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.GenreId)
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.GenreList, "Id", "Name"), "Select Genre")
+    </div>
+    <button type="submit">Save</button>
+}
